@@ -8,6 +8,15 @@ import Modal from "./Modal";
 function PostsList() {
   const [enteredBody, setEnteredBody] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
+  const [modalVisible, setModalVisible] = useState(true);
+
+  function hideModalHandler() {
+    setModalVisible(false);
+  }
+
+  function showModalHandler() {
+    setModalVisible(true);
+  }
 
   function bodyChangeHandler(event) {
     setEnteredBody(event.target.value);
@@ -18,12 +27,14 @@ function PostsList() {
   }
   return (
     <>
-      <Modal>
-      <NewPost
-        changeBodyHandler={bodyChangeHandler}
-        changeDateHandler={dateChangeHandler}
-      />
-      </Modal>
+      {modalVisible && (
+        <Modal onClose={hideModalHandler}>
+          <NewPost
+            changeBodyHandler={bodyChangeHandler}
+            changeDateHandler={dateChangeHandler}
+          />
+        </Modal>
+      )}
       <ul className={classes.posts}>
         <Post author={enteredDate} text={enteredBody} />
         <Post author="Junior" text="Apple" />
