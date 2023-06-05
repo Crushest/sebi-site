@@ -5,40 +5,23 @@ import Post from "./Post";
 import classes from "./PostsList.module.css";
 import Modal from "./Modal";
 
-function PostsList() {
-  const [enteredBody, setEnteredBody] = useState("");
-  const [enteredDate, setEnteredDate] = useState("");
-  const [modalVisible, setModalVisible] = useState(true);
+function PostsList({ isPosting, onStopPosting }) {
+  const [posts, setPosts] = useState([]);
 
-  function hideModalHandler() {
-    setModalVisible(false);
-  }
-
-  function showModalHandler() {
-    setModalVisible(true);
-  }
-
-  function bodyChangeHandler(event) {
-    setEnteredBody(event.target.value);
-  }
-
-  function dateChangeHandler(event) {
-    setEnteredDate(event.target.value);
+  function addPostHandler(postData) {
+    setPosts((existingPosts) => [postData, ...existingPosts]);
   }
   return (
     <>
-      {modalVisible && (
-        <Modal onClose={hideModalHandler}>
-          <NewPost
-            changeBodyHandler={bodyChangeHandler}
-            changeDateHandler={dateChangeHandler}
-          />
+      {isPosting && (
+        <Modal onClose={onStopPosting}>
+          <NewPost onCancel={onStopPosting} onAddPost={addPostHandler} />
         </Modal>
       )}
       <ul className={classes.posts}>
-        <Post author={enteredDate} text={enteredBody} />
-        <Post author="Junior" text="Apple" />
-        <Post author="Tom" text="Peach" />
+        {posts.map((post) => (
+          <Post key={post.body} date={post.date} body={post.body} />
+        ))}
       </ul>
     </>
   );
