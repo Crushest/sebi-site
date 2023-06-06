@@ -7,12 +7,15 @@ import Modal from "./Modal";
 
 function PostsList({ isPosting, onStopPosting }) {
   const [posts, setPosts] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     async function fetchPosts() {
+      setIsLoaded(true);
       const response = await fetch("http://localhost:8080/posts");
       const responseData = await response.json();
       setPosts(responseData.posts);
+      setIsLoaded(false);
     }
     fetchPosts();
   }, []);
@@ -34,18 +37,21 @@ function PostsList({ isPosting, onStopPosting }) {
           <NewPost onCancel={onStopPosting} onAddPost={addPostHandler} />
         </Modal>
       )}
-      {posts.length > 0 && (
+      {!isLoaded && posts.length > 0 && (
         <ul className={classes.posts}>
           {posts.map((post) => (
             <Post key={post.body} date={post.date} body={post.body} />
           ))}
         </ul>
       )}
-      {posts.length === 0 && (
+      {!isLoaded && posts.length === 0 && (
         <div style={{ textAlign: "center", color: "white" }}>
           <h2>No Posts Found</h2>
           <p>Start adding some!</p>
         </div>
+      )}
+      {isLoaded && (
+        <p style={{ textAlign: "center", color: "white" }}>Loading posts...</p>
       )}
     </>
   );
