@@ -21,12 +21,12 @@
   border: none;
   background-color: #e4a9a9;
   color: #2c2626;
-  resize: none;
 }
 
 .actions {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 0.5rem;
 }
 
@@ -44,10 +44,12 @@
   background-color: #4a0101;
 }
 
-.actions button[type='button'] {
+.actions a {
   background-color: transparent;
+  text-decoration: none;
+  color: #f7d5d5;
 }
 
-.actions button[type='button']:hover {
+.actions a:hover {
   color: #e6bebe;
 }

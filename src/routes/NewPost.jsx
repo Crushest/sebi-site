@@ -1,51 +1,42 @@
-import { useState } from "react";
 import classes from "./NewPost.module.css";
 import Modal from "../components/Modal";
+import { Link, Form, redirect } from "react-router-dom";
 
-function NewPost({ onCancel, onAddPost }) {
-  const [enteredBody, setEnteredBody] = useState("");
-  const [enteredDate, setEnteredDate] = useState("");
-
-  function bodyChangeHandler(event) {
-    setEnteredBody(event.target.value);
-  }
-
-  function dateChangeHandler(event) {
-    setEnteredDate(event.target.value);
-  }
-
-  function submitHandler(event) {
-    event.preventDefault();
-    const postData = {
-      body: enteredBody,
-      date: enteredDate,
-    };
-    onAddPost(postData);
-    onCancel();
-  }
-
+function NewPost() {
   return (
     <Modal>
-      <form className={classes.form} onSubmit={submitHandler}>
+      <Form method='post' className={classes.form}>
         <p>
           <label htmlFor="body">Text</label>
-          <textarea id="body" required rows={2} onChange={bodyChangeHandler} />
+          <textarea id="body" name="body" required rows={2} />
         </p>
         <p>
           <label htmlFor="name">Date</label>
-          <input type="text" id="name" required onChange={dateChangeHandler} />
+          <input type="text" id="name" name="date" required />
         </p>
         <p className={classes.actions}>
-          <button type="button" onClick={onCancel}>
+          <Link type="button" to="..">
             Cancel
-          </button>
-          <button type="submit" onSubmit={onAddPost}>
-            Submit
-          </button>
+          </Link>
+          <button>Submit</button>
         </p>
-      </form>
+      </Form>
     </Modal>
   );
 }
 
 export default NewPost;
+
+export async function action({request}) {
+  const formData = await request.formData();
+  const postData = Object.fromEntries(formData);
+  await fetch("http://localhost:8080/posts", {
+    method: "POST",
+    body: JSON.stringify(postData),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  return redirect("/");
+}
