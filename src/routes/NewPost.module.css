@@ -21,6 +21,9 @@
   border: none;
   background-color: #e4a9a9;
   color: #2c2626;
+  resize: vertical;
+  max-height: 30rem;
+  min-height: 3rem;
 }
 
 .actions {

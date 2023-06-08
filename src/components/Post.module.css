@@ -1,10 +1,13 @@
 .post {
     margin: 1rem 0;
-    padding: 1rem;
+    padding: 0rem 1rem 1rem 1rem;
     background-color: #ee7e7e;
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     animation: animate-in 1s ease-out forwards;
+    width: 15rem;
+    height: 15rem;
+    overflow: hidden;
   }
   
   .author {
@@ -15,6 +18,10 @@
     text-transform: uppercase;
   }
   
+  .post a {
+    text-decoration: none;
+  }
+
   .text {
     white-space: pre-wrap;
     font-size: 1.25rem;
