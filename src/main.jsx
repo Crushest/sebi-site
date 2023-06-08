@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     element: <RootLayouts />,
     children: [
       {
-        name: "Home",
+        name: "Blog Page",
         path: "/",
         element: <Posts />,
         loader: postLoader,
