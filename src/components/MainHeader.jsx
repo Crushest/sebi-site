@@ -1,21 +1,22 @@
 import { Link } from 'react-router-dom';
-import { MdPostAdd, MdMessage } from 'react-icons/md';
 
 import classes from './MainHeader.module.css';
 
 function MainHeader() {
   return (
     <header className={classes.header}>
-      <h1 className={classes.logo}>
-        <MdMessage />
-        Monthly Update
-      </h1>
-      <p>
         <Link to="/create-post" className={classes.button} >
-          <MdPostAdd size={18} />
-          New Post
+          Home
         </Link>
-      </p>
+        <Link to="/create-post" className={classes.button} >
+          Blog
+        </Link>
+        <Link to="/create-post" className={classes.button} >
+          Projects
+        </Link>
+        <Link to="/create-post" className={classes.button} >
+          Social Media
+        </Link>
     </header>
   );
 }

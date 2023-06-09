@@ -1,12 +1,13 @@
 .header {
     /* padding: 2rem 10%; */
-    margin: 2rem 10%;
+    margin: .5rem 5%;
     padding: 1rem;
     text-align: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    border-bottom: 2px solid #ece1fa;
+    border-bottom: 2px solid #fb9090;
+    gap: 2rem;
   }
   
   .logo {
@@ -20,14 +21,13 @@
   .button {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
+    gap: 1rem;
+    padding: 1rem 2rem;
     background-color: #fb9090;
-    color: #2a2630;
+    color: #302626;
     border: none;
-    border-radius: 4px;
+    border-radius: 50px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
     font-weight: bold;
     text-decoration: none;
   }
@@ -35,3 +35,5 @@
   .button:hover {
     background-color: #f76c6c;
   }
+
+  
