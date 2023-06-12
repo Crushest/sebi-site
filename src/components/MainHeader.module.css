@@ -1,13 +1,14 @@
 .header {
     /* padding: 2rem 10%; */
-    margin: .5rem 5%;
+    margin: 0 5% 1rem 1%;
     padding: 1rem;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid #fb9090;
-    gap: 2rem;
+    background-color: #ffffff10;
+    border-radius: 0 0 10px 10px;
+    gap: 10rem;
   }
   
   .logo {
@@ -23,8 +24,8 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem 2rem;
-    background-color: #fb9090;
-    color: #302626;
+    background-color: #ffffff13;
+    color: #ffffff;
     border: none;
     border-radius: 50px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -33,7 +34,8 @@
   }
   
   .button:hover {
-    background-color: #f76c6c;
+    background-color: #ffffff25;
+    color: #b30000;
   }
 
   

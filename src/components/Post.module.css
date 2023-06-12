@@ -1,7 +1,7 @@
 .post {
     margin: 1rem 0;
     padding: 1rem;
-    background-color: #ee7e7e;
+    background-color: #ffffff10;
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     animation: animate-in 1s ease-out forwards;
@@ -13,7 +13,7 @@
   .author {
     font-size: 0.8rem;
     font-weight: bold;
-    color: #803232;
+    color: #FFFFFF;
     margin: 0;
     text-transform: uppercase;
   }
@@ -26,7 +26,7 @@
     white-space: pre-wrap;
     font-size: 1.25rem;
     margin: 0 0 0 0;
-    color: #c95656;
+    color: #FFFFFF;
     font-style: italic;
     overflow: hidden;
     display: -webkit-box;

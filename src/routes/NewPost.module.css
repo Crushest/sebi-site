@@ -1,5 +1,5 @@
 .form {
-  background-color: #b93333;
+  background-color: #660000;
   padding: 1rem;
   width: 20rem;
 }
@@ -7,7 +7,7 @@
 .form label {
   display: block;
   margin-bottom: 0.05rem;
-  color: #fbdbdb;
+  color: #FFFFFF;
   font-weight: bold;
 }
 
@@ -17,10 +17,10 @@
   width: 100%;
   font: inherit;
   padding: 0.5rem;
-  border-radius: 6px;
+  border-radius: 8px;
   border: none;
-  background-color: #e4a9a9;
-  color: #2c2626;
+  background-color: #0000006c;
+  color: #FFFFFF;
   resize: vertical;
   max-height: 30rem;
   min-height: 3rem;
@@ -28,9 +28,9 @@
 
 .actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
-  gap: 0.5rem;
+  gap: auto;
 }
 
 .actions button {
@@ -39,20 +39,20 @@
   padding: 0.5rem 1.5rem;
   border: none;
   border-radius: 4px;
-  background-color: #6c0303;
-  color: #f7d5d5;
+  background-color: #8F0000;
+  color: #ffffff;
 }
 
 .actions button:hover {
-  background-color: #4a0101;
+  background-color: #850000;
 }
 
 .actions a {
   background-color: transparent;
   text-decoration: none;
-  color: #f7d5d5;
+  color: #FFFFFF;
 }
 
 .actions a:hover {
-  color: #e6bebe;
+  color: #c7c7c7;
 }

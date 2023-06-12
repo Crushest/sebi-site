@@ -1,13 +1,13 @@
 .details {
     padding: 2rem;
     width: 75rem;
-    background-color: #e4a9a9;
+    background-color: #000000d0;
   }
   
   .author {
     font-size: 0.8rem;
     font-weight: bold;
-    color: #2c2626;
+    color: #FFFFFF;
     margin: 0;
     text-transform: uppercase;
   }
@@ -16,7 +16,7 @@
     white-space: pre-wrap;
     font-size: 1.25rem;
     margin: 0.25rem 0 0 0;
-    color: #2c2626;
+    color: #FFFFFF;
     font-style: italic;
   }
   
