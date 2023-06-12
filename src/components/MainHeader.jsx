@@ -1,22 +1,24 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import classes from './MainHeader.module.css';
+import classes from "./MainHeader.module.css";
+import logo from "../img/Crushest.png";
 
 function MainHeader() {
   return (
     <header className={classes.header}>
-        <Link to="/create-post" className={classes.button} >
-          Home
-        </Link>
-        <Link to="/create-post" className={classes.button} >
-          Blog
-        </Link>
-        <Link to="/create-post" className={classes.button} >
-          Projects
-        </Link>
-        <Link to="/create-post" className={classes.button} >
-          Social Media
-        </Link>
+      <Link to="/create-post" className={classes.button}>
+        Home
+      </Link>
+      <Link to="/create-post" className={classes.button}>
+        Blog
+      </Link>
+      <img src={logo} className={classes.logo} />
+      <Link to="/create-post" className={classes.button}>
+        Projects
+      </Link>
+      <Link to="/create-post" className={classes.button}>
+        Social Media
+      </Link>
     </header>
   );
 }
