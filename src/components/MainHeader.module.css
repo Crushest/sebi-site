@@ -1,5 +1,4 @@
 .header {
-    /* padding: 2rem 10%; */
     margin: 0 5% 1rem 5%;
     padding: 1rem;
     text-align: center;
@@ -14,7 +13,11 @@
   
   .logo {
     display: flex;
-    height: 4rem;
+    height: 8rem;
+    padding: 1%;
+    border-radius: 50%;
+    background-color: #242424;
+    box-shadow: 0px 0px 10px #ffffff10;
   }
   
   .button {
@@ -26,14 +29,14 @@
     color: #ffffff;
     border: none;
     border-radius: 50px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px #cfcfcf10;
     font-weight: bold;
     text-decoration: none;
   }
   
   .button:hover {
     background-color: #ffffff25;
-    color: #b30000;
+    color: #ad2b2b;
   }
 
   
