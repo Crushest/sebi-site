@@ -6,17 +6,17 @@ import logo from "../img/Crushest.png";
 function MainHeader() {
   return (
     <header className={classes.header}>
-      <Link to="/create-post" className={classes.button}>
+      <Link to="/" className={classes.button}>
         Home
       </Link>
-      <Link to="/create-post" className={classes.button}>
+      <Link to="/blog" className={classes.button}>
         Blog
       </Link>
       <img src={logo} className={classes.logo} />
-      <Link to="/create-post" className={classes.button}>
+      <Link to="/projects" className={classes.button}>
         Projects
       </Link>
-      <Link to="/create-post" className={classes.button}>
+      <Link to="/contact" className={classes.button}>
         Contact Me
       </Link>
     </header>
