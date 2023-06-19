@@ -17,7 +17,7 @@ function MainHeader() {
         Projects
       </Link>
       <Link to="/create-post" className={classes.button}>
-        Social Media
+        Contact Me
       </Link>
     </header>
   );
