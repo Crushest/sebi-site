@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import classes from "./MainHeader.module.css";
-import logo from "../img/Crushest.png";
+import logo from "../img/Crushest-Logo.png";
 
 function MainHeader() {
   return (
